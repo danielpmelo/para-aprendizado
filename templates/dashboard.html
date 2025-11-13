@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Meu Projeto{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h2>Dashboard</h2>
+  <p>Área administrativa do projeto</p>
+</section>
+
+<section class="content">
+  <h2>Bem-vindo ao Dashboard, {% if user and user.first_name %}{{ user.first_name }}{% else %}Usuário{% endif %}!</h2>
+  <p>Esta é uma área protegida que requer autenticação.</p>
+  {% if user and user.email %}
+  <p>Email: {{ user.email }}</p>
+  {% endif %}
+  
+  <div class="card-container">
+    <div class="card">
+      <h3>📊 Estatísticas</h3>
+      <p>Visualize seus dados</p>
+      <p class="stat-number">1,234</p>
+    </div>
+    <div class="card">
+      <h3>👥 Usuários</h3>
+      <p>Total de usuários</p>
+      <p class="stat-number">567</p>
+    </div>
+    <div class="card">
+      <h3>📈 Atividade</h3>
+      <p>Últimas 24h</p>
+      <p class="stat-number">89</p>
+    </div>
+  </div>
+
+  <div class="dashboard-actions">
+    <h3>Ações Rápidas</h3>
+    <button class="btn-primary" onclick="alert('Funcionalidade em breve!')">Nova Tarefa</button>
+    <button class="btn-secondary" onclick="alert('Funcionalidade em breve!')">Ver Relatórios</button>
+    <button class="btn-secondary" onclick="alert('Funcionalidade em breve!')">Configurações</button>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+.dashboard-actions {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.dashboard-actions h3 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+</style>
+{% endblock %}

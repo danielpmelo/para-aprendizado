@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre - Meu Projeto{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h2>Sobre o Projeto</h2>
+  <p>Conheça mais sobre nossa aplicação full-stack</p>
+</section>
+
+<section class="content">
+  <h2>Nossa História</h2>
+  <p>Este projeto evoluiu de um simples site estático para uma aplicação web completa com backend, banco de dados e autenticação.</p>
+  
+  <div class="card-container">
+    <div class="card">
+      <h3>🎨 Frontend Moderno</h3>
+      <p>HTML5, CSS3 e JavaScript</p>
+      <ul style="text-align: left; margin-top: 1rem;">
+        <li>Design responsivo</li>
+        <li>Tema escuro/claro</li>
+        <li>Animações suaves</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚡ Backend Robusto</h3>
+      <p>Flask Python Framework</p>
+      <ul style="text-align: left; margin-top: 1rem;">
+        <li>API RESTful</li>
+        <li>Rotas protegidas</li>
+        <li>Sessões seguras</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🗄️ Banco de Dados</h3>
+      <p>PostgreSQL</p>
+      <ul style="text-align: left; margin-top: 1rem;">
+        <li>Dados persistentes</li>
+        <li>Consultas otimizadas</li>
+        <li>Backup automático</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 3rem; padding: 2rem; background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border-color);">
+    <h3>Tecnologias Utilizadas</h3>
+    <div class="tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Flask</span>
+      <span class="tech-badge">PostgreSQL</span>
+      <span class="tech-badge">HTML5</span>
+      <span class="tech-badge">CSS3</span>
+      <span class="tech-badge">JavaScript</span>
+      <span class="tech-badge">Replit Auth</span>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <h3>Entre em Contato</h3>
+    <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+    <a href="/" class="btn-primary" style="display: inline-block; margin-top: 1rem;">Voltar ao Início</a>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tech-badge {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li:before {
+  content: "✓ ";
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+</style>
+{% endblock %}

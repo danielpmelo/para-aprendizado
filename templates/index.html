@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Projeto Web Full-Stack{% endblock %}
+
+{% block content %}
+<section id="home" class="hero">
+  <h2>Bem-vindo ao Projeto Web Básico</h2>
+  <p>Esta é uma estrutura profissional para desenvolvimento web.</p>
+  <button id="mainButton">Clique Aqui</button>
+</section>
+
+<section id="about" class="content">
+  <h2>Sobre o Projeto</h2>
+  <p>Este projeto demonstra a estrutura básica de um site profissional com HTML, CSS e JavaScript organizados em pastas.</p>
+  <div class="card-container">
+    <div class="card">
+      <h3>HTML</h3>
+      <p>Estrutura semântica</p>
+    </div>
+    <div class="card">
+      <h3>CSS</h3>
+      <p>Estilização moderna</p>
+    </div>
+    <div class="card">
+      <h3>JavaScript</h3>
+      <p>Interatividade</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="content">
+  <h2>Contato</h2>
+  <p>Entre em contato através do formulário abaixo:</p>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu email" required>
+    <textarea name="message" placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+{% endblock %}
